@@ -1,0 +1,14 @@
+img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+.card {
+    display: inline-block;
+    margin: 45px;
+    padding: 10px;
+}
+
+.card:hover {
+    background-color: aquamarine;
+}
