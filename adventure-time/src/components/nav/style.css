@@ -7,13 +7,13 @@
 .title{
     font-size: 30px;
 }
-.nav {
-text-align: right;
-padding-bottom: 5px;
-padding-right: 50px;
+.container-fluid {
+    display: inline-block;
+    text-align: right;
+    float: right;
+    padding-right: 3%;
 }
-.navbar-brand {
-    /* padding-left: 30px; */
-   margin: 10px;
-   
+.adventureImg {
+    padding: 10px;
+    display: inline-block;
 }

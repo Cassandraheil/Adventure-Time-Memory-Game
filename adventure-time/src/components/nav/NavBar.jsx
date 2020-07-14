@@ -6,9 +6,10 @@ function NavBar(props) {
   return (
     <div>
       <nav class="navbar navbar-inverse navbar-fixed-top jumbotron">
+      <img class="adventureImg" alt="adventure time logo" src="https://i.etsystatic.com/10281372/r/il/7af34c/1047011185/il_570xN.1047011185_og43.jpg" />
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand">Memory Game</a>
+            <h3 class="navbar-brand">Memory Game</h3>
           </div>
           <div class="nav navbar-nav">
             <p>Score: {props.score}</p>

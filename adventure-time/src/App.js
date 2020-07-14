@@ -16,13 +16,7 @@ class App extends Component {
   };
 
 
-  maxScore = () => {
-      if(this.state.score > this.state.topScore){
-      this.setState(
-                {topScore: this.state.score}
-            )
-      }
-     };
+  
 
   restart = card => {
     const resetCard = card.map(item => ({ ...item, clicked: false }));
@@ -51,16 +45,28 @@ class App extends Component {
     
     const newScore = this.state.score + 1
 
+    const newTopScore = Math.max(newScore, this.state.topScore);
+
     const rightTerms = ["Mathmatical!", "Shmowzow!", "Algebraic!", "Flipping Awesome Dude!", "Lumpin killing it", "Radical!", "Alphanumeric!"]
     let num = Math.floor(Math.random()* rightTerms.length)
     let newTitle = rightTerms[num]
+
+
     this.setState({
       card: this.shuffle(card),
       score: newScore,
-      title: newTitle
+      title: newTitle,
+      topScore: newTopScore
     });
-    this.maxScore();
+    // this.maxScore();
   };
+
+  // maxScore = () => {
+      // if(this.state.score > this.state.topScore){
+      // this.setState(
+      //   {topScore: this.state.score}
+      // )}
+    //  };
 
   handleClicked = id => {
 
