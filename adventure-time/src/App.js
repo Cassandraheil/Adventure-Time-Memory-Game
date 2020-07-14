@@ -28,13 +28,13 @@ class App extends Component {
     for (var i=0; i< this.state.card.length; i++){
       this.state.card[i].clicked = false;
     }
-    this.state.score = 0;
-    this.state.title = "Oh No, they've been clicked already! Try again";
-    console.log("title", this.state.title) //console.logs but doesn't display// it did before idk what changed
+    const newScore = 0;
+    const newTitle = "Oh No, they've been clicked already! Try again";
+
     this.setState({
       card,
-      score: this.state.score,
-      title: this.state.title
+      score: newScore,
+      title: newTitle
     });
   }
 
@@ -52,12 +52,14 @@ class App extends Component {
   };
   
   correct = card => {
-    this.maxScore();
-
+    
+    const newScore = this.state.score + 1
+    
     this.setState({
       data: this.shuffle(card),
-      score: this.score
+      score: newScore
     });
+    this.maxScore();
   };
 
   wrong = card => {
@@ -68,28 +70,32 @@ class App extends Component {
   };
 
   handleClicked = id => {
-    console.log(id)
-    console.log(this.state.card)
+    console.log("tis the state", this.state.card)
 
     let rightAnswer = false;
-    const card = this.state.card.map(item => {
+    let updatedCard = [];
+
+    const newCard = this.state.card.map(item => {
       const newItem = { ...item };
       if (newItem.id === id) {
         if (!newItem.clicked) {
           newItem.clicked = true;
+          // console.log("new item", newItem)
           rightAnswer = true;
         }
       }
-      return newItem;
+      // console.log("new item afterword...", newItem)
+      updatedCard.push(newItem)
     });
+
+
     rightAnswer
-      ? this.correct(card)
-      : this.wrong(card);
+      ? this.correct(newCard)
+      : this.wrong(newCard);
 
 
     this.setState({
-      card,
-      score: this.state.score,
+      card: updatedCard,
       title: "Adventure Time!"
     });
     

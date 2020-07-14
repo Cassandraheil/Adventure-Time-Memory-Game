@@ -7,3 +7,13 @@
 .title{
     font-size: 30px;
 }
+.nav {
+text-align: right;
+padding-bottom: 5px;
+padding-right: 50px;
+}
+.navbar-brand {
+    /* padding-left: 30px; */
+   margin: 10px;
+   
+}

@@ -10,10 +10,10 @@ function NavBar(props) {
           <div class="navbar-header">
             <a class="navbar-brand">Memory Game</a>
           </div>
-          <ul class="nav navbar-nav">
-            <li>Score: {props.score}</li>
-            <li>Top Score: {props.topScore}</li>
-          </ul>
+          <div class="nav navbar-nav">
+            <p>Score: {props.score}</p>
+            <p>Top Score: {props.topScore}</p>
+          </div>
         </div>
       </nav>
       <div className="underNav">
