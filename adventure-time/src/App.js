@@ -17,7 +17,7 @@ class App extends Component {
 
 
   maxScore = () => {
-      if(this.state.score> this.state.topScore){
+      if(this.state.score > this.state.topScore){
       this.setState(
                 {topScore: this.state.score}
             )
@@ -25,16 +25,12 @@ class App extends Component {
      };
 
   restart = card => {
-    console.log("must have been wrong")
-    for (var i=0; i< this.state.card.length; i++){
-      this.state.card[i].clicked = false;
-    }
-    const newTitle = "Oh No, they've been clicked already! Try again";
+    const resetCard = card.map(item => ({ ...item, clicked: false }));
 
     this.setState({
-      card: this.shuffle(card),
-      score: 0,
-      title: newTitle
+      title: "Bunk Man, they've been clicked already! Try again",
+      card: resetCard,
+      score: 0
     });
   }
 
@@ -52,13 +48,16 @@ class App extends Component {
   };
   
   correct = card => {
-    console.log("must have been right!")
     
     const newScore = this.state.score + 1
-    
+
+    const rightTerms = ["Mathmatical!", "Shmowzow!", "Algebraic!", "Flipping Awesome Dude!", "Lumpin killing it", "Radical!", "Alphanumeric!"]
+    let num = Math.floor(Math.random()* rightTerms.length)
+    let newTitle = rightTerms[num]
     this.setState({
       card: this.shuffle(card),
-      score: newScore
+      score: newScore,
+      title: newTitle
     });
     this.maxScore();
   };
@@ -79,16 +78,17 @@ class App extends Component {
       updatedCard.push(newItem)
     });
 
+    this.setState({
+          card: updatedCard,
+          title: "Adventure Time!"
+      });
 
     rightAnswer
       ? this.correct(updatedCard)
       : this.restart(updatedCard);
 
 
-    this.setState({
-      card: updatedCard,
-      title: "Adventure Time!"
-    });
+    
     
   };
 
