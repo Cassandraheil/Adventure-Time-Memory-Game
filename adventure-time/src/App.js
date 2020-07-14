@@ -82,6 +82,7 @@ class App extends Component {
         }
       }
       updatedCard.push(newItem)
+      return newItem
     });
 
     this.setState({
