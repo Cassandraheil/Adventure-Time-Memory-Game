@@ -24,16 +24,16 @@ class App extends Component {
       }
      };
 
-  restart = () => {
+  restart = card => {
+    console.log("must have been wrong")
     for (var i=0; i< this.state.card.length; i++){
       this.state.card[i].clicked = false;
     }
-    const newScore = 0;
     const newTitle = "Oh No, they've been clicked already! Try again";
 
     this.setState({
-      card,
-      score: newScore,
+      card: this.shuffle(card),
+      score: 0,
       title: newTitle
     });
   }
@@ -52,25 +52,18 @@ class App extends Component {
   };
   
   correct = card => {
+    console.log("must have been right!")
     
     const newScore = this.state.score + 1
     
     this.setState({
-      data: this.shuffle(card),
+      card: this.shuffle(card),
       score: newScore
     });
     this.maxScore();
   };
 
-  wrong = card => {
-    this.setState({
-      data: this.restart(card),
-      score: 0
-    });
-  };
-
   handleClicked = id => {
-    console.log("tis the state", this.state.card)
 
     let rightAnswer = false;
     let updatedCard = [];
@@ -80,18 +73,16 @@ class App extends Component {
       if (newItem.id === id) {
         if (!newItem.clicked) {
           newItem.clicked = true;
-          // console.log("new item", newItem)
           rightAnswer = true;
         }
       }
-      // console.log("new item afterword...", newItem)
       updatedCard.push(newItem)
     });
 
 
     rightAnswer
-      ? this.correct(newCard)
-      : this.wrong(newCard);
+      ? this.correct(updatedCard)
+      : this.restart(updatedCard);
 
 
     this.setState({
