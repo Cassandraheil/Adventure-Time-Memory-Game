@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 3ba53ba857f7b7a24af2bd16bd5ccf60f52c67fe Cassandra Heil <Cassandraheil19@gmail.com> 1588194562 -0400	clone: from git@github.com:Cassandraheil/Clicky-Game.git
+3ba53ba857f7b7a24af2bd16bd5ccf60f52c67fe 4424fffda19a1aa8835264cfa6427f6fa0548012 Cassandra Heil <Cassandraheil19@gmail.com> 1588195774 -0400	commit: installed react, updated readME
+4424fffda19a1aa8835264cfa6427f6fa0548012 ecf89943a8377c78ed6eddd8830602f00ad6279c Cassandra Heil <Cassandraheil19@gmail.com> 1588461305 -0400	commit: got images to show up
+ecf89943a8377c78ed6eddd8830602f00ad6279c 8e384f97dbbb68db70f2c9f255061d1d00b6067c Cassandra Heil <Cassandraheil19@gmail.com> 1588521762 -0400	commit: got basic styling done, and card clicks true or false working
+8e384f97dbbb68db70f2c9f255061d1d00b6067c 80d218fa2b380ab4d64a88318998fd87844190f3 Cassandra Heil <Cassandraheil19@gmail.com> 1588536308 -0400	commit: added styling and more cards
+80d218fa2b380ab4d64a88318998fd87844190f3 e6a6c63b7fdb565ea06fb6697c195c2f4be097c3 Cassandra Heil <Cassandraheil19@gmail.com> 1588538381 -0400	commit: more styling
+e6a6c63b7fdb565ea06fb6697c195c2f4be097c3 4c6539a7804eb023cb2c352f86e2482d99444d64 Cassandra Heil <Cassandraheil19@gmail.com> 1588538857 -0400	commit: updated readMe
+4c6539a7804eb023cb2c352f86e2482d99444d64 61db0c293cb7f9bf2dc877c33c4257599d351fb6 Cassandra Heil <Cassandraheil19@gmail.com> 1588721885 -0400	commit: changed my files around
+61db0c293cb7f9bf2dc877c33c4257599d351fb6 3deb08cb7d86cc6497d77d518b9cde25f5a7f9f2 Cassandra Heil <Cassandraheil19@gmail.com> 1588722571 -0400	commit: changed package json to deploy
+3deb08cb7d86cc6497d77d518b9cde25f5a7f9f2 4eb24bb5dabd7dc004f7377308a02628e6b741ad Cassandra Heil <Cassandraheil19@gmail.com> 1588722719 -0400	commit: moved files aruond
+4eb24bb5dabd7dc004f7377308a02628e6b741ad 3f30269e8bcdd9f7f7b7a56acc701d09f27d356d Cassandra Heil <Cassandraheil19@gmail.com> 1588723062 -0400	commit: typo in package json corrected
+3f30269e8bcdd9f7f7b7a56acc701d09f27d356d 39623bd3ad88211b067b3dd0e0cd36223181dd76 Cassandra Heil <Cassandraheil19@gmail.com> 1588723161 -0400	commit (merge): Merge branch 'master' of github.com:Cassandraheil/Clicky-Game
